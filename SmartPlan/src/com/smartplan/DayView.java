@@ -1,8 +1,5 @@
 package com.smartplan;
 
-import com.example.smartplan.R;
-import com.example.smartplan.R.layout;
-import com.example.smartplan.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
