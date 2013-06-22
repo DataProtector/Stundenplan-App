@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.smartplan;
+package com.example.stundenplan;
 
 public final class R {
     public static final class attr {
@@ -88,12 +88,9 @@ public final class R {
         public static final int button5k=0x7f080059;
         public static final int button5l=0x7f080060;
         public static final int button_Edit=0x7f080004;
-        public static final int dayview=0x7f080064;
-        public static final int edit=0x7f080062;
         public static final int editSubject=0x7f080000;
         public static final int editTeacher=0x7f080001;
         public static final int scrollView1=0x7f080005;
-        public static final int settings=0x7f080063;
         public static final int tableRow1=0x7f080006;
         public static final int tableRow10=0x7f080045;
         public static final int tableRow11=0x7f08004c;
@@ -127,12 +124,12 @@ public final class R {
         public static final int textView_hour9=0x7f080046;
     }
     public static final class layout {
-        public static final int activity_day_view=0x7f030000;
+        public static final int activity_day=0x7f030000;
         public static final int activity_edit=0x7f030001;
         public static final int activity_main=0x7f030002;
     }
     public static final class menu {
-        public static final int day_view=0x7f070000;
+        public static final int day=0x7f070000;
         public static final int edit=0x7f070001;
         public static final int main=0x7f070002;
     }
