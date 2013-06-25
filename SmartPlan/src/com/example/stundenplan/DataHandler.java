@@ -1,6 +1,7 @@
 package com.example.stundenplan;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -13,13 +14,14 @@ import android.util.Log;
  * Data_management 
  * 
  * Laufzeit:
- * Speichert Stundenplan in Liste aus Listen 
- * Speichert Vorhandene Stunden in Liste aus LL_TimeTable
+ * Speichert Stundenplan in Mehrd. Array
+ * Speichert Vorhandene Stunden in Liste LL_TimeTable
  * 
  * Datenbank:
  * Speichert Stundenplan in Datenbank
- * Läd Stundenplan bei Start der App in Liste aus Listen
+ * Läd Stundenplan bei Start der App array
  *
+ * F.S 25.6.13
  */
 public class DataHandler {
 	static int Days = 5;
@@ -31,30 +33,33 @@ public class DataHandler {
 
 	// Linkedlist aus Vordefinierten Fächern (Edit_Activity)
 
-	// Füllt Timetable mit Werten und Fügt vorhandene vordefinierte Subjects in
-	// LL_definedSubjects ein , sodass sie verwendet werden kann
-	// Doppelte inhalte werden nicht in das Array aufgenommen und sofort von der
-	// Datenbank gelöscht
-	public static void FillFromDatabase(Context context) {
+	// Füllt Hashtable und Array 
+	// Doppelte Einträge aus Datenbank löschen
+	static void FillFromDatabase(Context context) {
 
-		// Alle Subjects von Datenbank lesen
+		// Alle Subjects und dessen EntryID von Datenbank lesen
 		LinkedList<Subject> LL_Subjects = readAllSubjectsFromDatabase(context);
-
-		// Alle Tage und Stunden von Datenbank lesen --> Reihenfolge ist wie bei
-		// LL_Database
-		LinkedList<int[]> LL_DaysAndLessons = readAllDaysAndLessonsFromDatabase(context);
-
+		LinkedList<Integer> LL_SubjectEntryID = readAllSubjectsEntryIDFromDatabase(context);
+		// Alle Tage und Stunden von Datenbank lesen 
+		LinkedList<int[]> LL_DaysAndLessons = readTimeTable(context);
 		
+		// Hashtable füllen doppelte einträge löschen
+		for (int i = 0; i < LL_Subjects.size(); i++) {
+			if (!HT_definedSubjects.containsKey(LL_Subjects.get(i).getID())) {
+				HT_definedSubjects.put(LL_Subjects.get(i).getID(),LL_Subjects.get(i));
+			} else {
+				DeleteRow(LL_SubjectEntryID.get(i),context);
+			}
+		}
+
 		// Liste aus Doppelten Einträgen
-		LinkedList<Integer> LL_toDelete = checkDoubleTimetable(
-				LL_DaysAndLessons, context);
+		LinkedList<Integer> LL_toDelete = checkDoubleTimetable(LL_DaysAndLessons, context);
 
 		// Doppelte Einträge löschen (Erstes wird gelöscht)
 		for (int i = 0; i < LL_toDelete.size(); i++) {
-			LL_Subjects.remove(LL_toDelete.get(i)-1);
-			LL_DaysAndLessons.remove(LL_toDelete.get(i)-1);  
+			LL_DaysAndLessons.remove(LL_toDelete.get(i) - 1);
+			DeleteRow(LL_toDelete.get(i),context);
 		}
-
 		// Array mit Puffer füllen
 		for (int i = 0; i < Days; i++) {
 			for (int j = 0; j < Lessons; j++) {
@@ -64,21 +69,25 @@ public class DataHandler {
 
 		// Array Iterieren und werte in Timetable einfügen
 		for (int i = 0; i < LL_DaysAndLessons.size(); i++) {
-			Timetable[LL_DaysAndLessons.get(i)[0]][LL_DaysAndLessons.get(i)[1]] = LL_Subjects
-					.get(i);
-		}
-
-		// Hashtable füllen
-		for (int i = 0; i < LL_Subjects.size(); i++) {
-			if (!HT_definedSubjects.containsKey(LL_Subjects.get(i).getID())) {
-				HT_definedSubjects.put(LL_Subjects.get(i).getID(),
-						LL_Subjects.get(i));
-			}
+			Timetable[LL_DaysAndLessons.get(i)[0]][LL_DaysAndLessons.get(i)[1]] = HT_definedSubjects.get(LL_DaysAndLessons.get(i)[2]);
 		}
 
 	}// FillTimetableFromDatabase>
-
-	static public void showTimetable() {
+	
+	
+	
+	static  void setSubjectAt(Subject sub,int Day_ID, int Lesson_ID,Context context){
+		addToDatabase(sub, Day_ID, Lesson_ID, context);
+		Timetable[Day_ID][Lesson_ID] = sub;
+	}//setSubjectAt>
+	
+	static void addSubject(Subject sub,Context c){
+				addSubjectToDatabase(sub, c);
+				HT_definedSubjects.put(sub.getID(), sub);
+	}//addSubject>
+	
+	
+	static void showTimetable() {
 		for (int i = 0; i < Days; i++) {
 			for (int j = 0; j < Lessons; j++) {
 				Timetable[i][j].Show(i, j);
@@ -86,7 +95,7 @@ public class DataHandler {
 		}
 	}
 
-	static public void showdefinedSubjects() {
+	static void showdefinedSubjects() {
 		for (int i = 0; i < HT_definedSubjects.size(); i++) {
 			String log = "SubjectID: " + HT_definedSubjects.get(i).getID()
 					+ " ,Name: " + HT_definedSubjects.get(i).getName()
@@ -112,7 +121,7 @@ public class DataHandler {
 				if (LL_DaysAndLessons.get(i)[0] == LL_DaysAndLessons.get(j)[0]
 						&& LL_DaysAndLessons.get(i)[1] == LL_DaysAndLessons
 								.get(j)[1]) {
-					LL_toDelete.add(LL_DaysAndLessons.get(i)[2]);
+					LL_toDelete.add(LL_DaysAndLessons.get(i)[3]);
 				}
 			}
 		}
@@ -132,35 +141,39 @@ public class DataHandler {
 	static Hashtable<Integer, Subject> getSubjects() {
 		return HT_definedSubjects;
 	}
+	
+	static Subject getSubjectByName(String name) {
+		 Enumeration<Integer> e = HT_definedSubjects.keys();
+		    while(e.hasMoreElements()){
+		    	int key = e.nextElement();
+		    	Subject val = HT_definedSubjects.get(key);
+		    	if(val.getName().compareToIgnoreCase(name) == 0){
+		    		return val;
+		    	}
+		  }
+		 return null;
+	}
 
 	/* ****************************************************
 	 * DATABASE **************************************************
 	 */
 
-	// Einzelnes Object zur Datenbank hinzufügen
-	static void addToDatabase(Subject sub, int Day_ID, int Lesson_ID,
+	// Einzelnes Subject zur SubjectTable hinzufügen
+	private static void addSubjectToDatabase(Subject sub, Context context) {
+		// DATENBANK
+		DatabaseHandler db = new DatabaseHandler(context);
+		Log.d("Database: ", "Inserting new Subject..");
+		db.addSubject(sub);
+	}// addToDatabase>
+
+	// Einzelnes Object zur TimeTable hinzufügen
+	private static void addToDatabase(Subject sub, int Day_ID, int Lesson_ID,
 			Context context) {
 		// DATENBANK
 		DatabaseHandler db = new DatabaseHandler(context);
-		Log.d("Database: ", "Inserting ..");
-		db.addSubject(sub, Day_ID, Lesson_ID);
+		Log.d("Database: ", "Inserting existing Subject..");
+		db.addSubjectInTimeTable(sub, Day_ID, Lesson_ID);
 	}// addToDatabase>
-
-	// Einzelnes Subject von Datenbank lesen
-	static Subject readFromDatabase(int Day_id, int Lesson_ID, Context context) {
-
-		Log.d("Database: ", "Reading.. Tag_ID: " + Day_id + " Stunde(+1): "
-				+ Lesson_ID);
-		DatabaseHandler db = new DatabaseHandler(context);
-		Subject result = db.readSubject(Day_id, Lesson_ID);
-
-		String log = "Subject ID: " + result.getID() + " ,Name: "
-				+ result.getName() + " ,Teacher: " + result.getTeacher()
-				+ " Color_ID: " + result.getColor_ID();
-		Log.d("Database: ", "Read: " + log);
-
-		return result;
-	}// readFromDatabase>
 
 	// alle Subjects von Datenbank lesen
 	private static LinkedList<Subject> readAllSubjectsFromDatabase(
@@ -179,17 +192,34 @@ public class DataHandler {
 		}
 		return LL_result;
 	}// readFromDatabase>
+	
+	//Liest alle EntryIDs von Datenbank --> Zweck: Doppelte einträge in FillFromDatabase zu löschen
+	private static LinkedList<Integer> readAllSubjectsEntryIDFromDatabase(Context context) {
+		
+		DatabaseHandler db = new DatabaseHandler(context);
+		LinkedList<Integer> LL_result = db.readAllSubjectEntryIDs();
+		return LL_result;
+	}//readAllSubjectsEntryIDFromDatabase>
+
+
 
 	// Alle Tage und dazugehörige Stunden lesen und in Array abspeichern
 	// (Reihenfolge ist die gleiche wie readAllFromDatabase)
-	private static LinkedList<int[]> readAllDaysAndLessonsFromDatabase(
+	private static LinkedList<int[]> readTimeTable(
 			Context context) {
 
 		Log.d("Database: ", "Reading.. All Days and Lessons");
 		DatabaseHandler db = new DatabaseHandler(context);
-		LinkedList<int[]> LL_result = db.readAllDaysAndLessons();
+		LinkedList<int[]> LL_result = db.readTimeTable();
 		return LL_result;
 	}// readFromDatabase>
+	
+	//Change TimeTable an position DAYID, LESSONID
+	private static void changeTimeTableinDatabaseAt(Subject sub,int Day_ID, int Lesson_ID,Context context){
+		DatabaseHandler db = new DatabaseHandler(context);
+		db.updateSubject(sub, Day_ID, Lesson_ID);
+		Log.d("Database: ", "Changed: " +Day_ID + " "+ Lesson_ID);
+	}
 
 	// Anhand der EintragsID eine Spalte der Datenbank löschen
 	private static void DeleteRow(int EntryID, Context context) {
@@ -204,5 +234,8 @@ public class DataHandler {
 		db.deleteDatabase(context);
 		Log.d("Database: ", "Delete Database..");
 	}
+
+
+	
 
 }// class Data_management>
