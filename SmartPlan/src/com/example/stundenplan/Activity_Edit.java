@@ -32,23 +32,11 @@ public class Activity_Edit extends Activity {
 		// Show the Up button in the action bar.
 
 		inits(); 	//initialisiert die variablen
-		Subject sub = new Subject(0,"Informatik","KOL",0);
-		/*
-		Subject sub2 = new Subject(1,"Biologie","Ruth",0);
-		DataHandler.DeleteDatabase(this);
-		DataHandler.addToDatabase(sub2, 0, 0, this);
-		DataHandler.addToDatabase(sub2, 1, 0, this);
-		DataHandler.addToDatabase(sub, 2, 0, this);
-		DataHandler.addToDatabase(sub, 0, 0, this);
-		DataHandler.FillFromDatabase(this);
-		DataHandler.showTimetable();
-		DataHandler.showdefinedSubjects();*/
-		Timetable t = new Timetable(this);
-		DataHandler.DeleteDatabase(this);
-		DataHandler.addToDatabase(sub, 0, 0, this);
-		t.readTable();
-		t.setSubjectAt(0, 1, 2);
-		t.showtable();
+		
+		
+		Timetable.DebugTest(this);
+		
+		
 	}//OnCreate>
 
 	//Variablen initialisieren
@@ -61,7 +49,7 @@ public class Activity_Edit extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				Toast.makeText(Activity_Edit.this,"Die eingegebenen Daten wurden in den Stundenplan eingetragen!" ,Toast.LENGTH_SHORT).show();
-				ChangeTimeTable(); 
+				
 				
 			}
 		});
@@ -129,13 +117,6 @@ public class Activity_Edit extends Activity {
 	}
 	
 	
-	public void ChangeTimeTable(){
-		//Ausgewählte IDs herausfinden
-		int dayID =  sp_day.getSelectedItemPosition() + 1;
-		int lessonID = sp_lesson.getSelectedItemPosition() + 1;
-	 
-		Timetable.setSubjectAt(0, dayID, lessonID);
-	}
 	
 
 }
