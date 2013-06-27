@@ -87,8 +87,8 @@ public final class R {
         public static final int button5j=0x7f080052;
         public static final int button5k=0x7f080059;
         public static final int button5l=0x7f080060;
-        public static final int button_Edit=0x7f080004;
-        public static final int editSubject=0x7f080000;
+        public static final int button_Edit=0x7f080000;
+        public static final int editSubject=0x7f080004;
         public static final int editTeacher=0x7f080001;
         public static final int scrollView1=0x7f080005;
         public static final int tableRow1=0x7f080006;
