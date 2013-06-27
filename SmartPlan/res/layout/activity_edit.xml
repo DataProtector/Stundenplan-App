@@ -3,60 +3,56 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:baselineAligned="true"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".EditActivity" >
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-         
-         <EditText
-             android:id="@+id/editSubject"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="28dp"
-             android:ems="10"
-             android:hint="@string/subject" >
-
-        <requestFocus />
-    	</EditText>
-
-         <EditText
-             android:id="@+id/editTeacher"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="15dp"
-             android:ems="10"
-             android:hint="@string/teacher" />
-
-         <Spinner
-             android:id="@+id/Tagwahl"
-             android:layout_marginTop="15dp"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:background="#999999"
-             android:contentDescription="@string/day" />
-    
-        <Spinner
-            android:id="@+id/Stundenwahl" 
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#999999"
-            android:contentDescription="@string/day" />
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/button_Edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="24dp"
         android:layout_weight="0"
         android:text="@string/newedit" />
+
+    <EditText
+        android:id="@+id/editTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="@string/teacher" />
+
+    <Spinner
+        android:id="@+id/Tagwahl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Stundenwahl"
+        android:layout_marginTop="28dp"
+        android:background="#999999"
+        android:contentDescription="@string/day" />
+
+    <EditText
+        android:id="@+id/editSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTeacher"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/subject" />
+
+    <Spinner
+        android:id="@+id/Stundenwahl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editSubject"
+        android:layout_marginTop="20dp"
+        android:background="#999999"
+        android:contentDescription="@string/day" />
 
 </LinearLayout>

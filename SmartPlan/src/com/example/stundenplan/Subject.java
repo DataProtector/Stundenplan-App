@@ -53,7 +53,7 @@ public class Subject {
 	}
 
 	public void Show(int Day_id,int Lesson_id) {
-		String log = "SubjectID: " + getID() + " ,Name: "
+		String log = "ID: " + getID() + " ,Name: "
 				+ getName() + " ,Teacher: "
 				+ getTeacher() + " ColorID: "
 				+getColor_ID();
