@@ -110,20 +110,24 @@ public class Activity_Day extends Activity {
 		
 		
 		
+		insertSubjects();
+		
+	}
+	
+	public void insertSubjects(){
 		// Fächer aus der Timetable werden eingesetzt
+		
+		DataHandler.FillFromDatabase(this);
+		Subject[][] tmpTimetable = DataHandler.getTimetable();
+		
 		
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 12; j++){
-				lessons[i][j].setText(getInformation(DataHandler.getTimetable()[i][j]));
+				lessons[i][j].setText(tmpTimetable[i][j].getName() + "\n" + tmpTimetable[i][j].getTeacher());
 			}
 		}
-		
 	}
 	
 	
-	public String getInformation(Subject subject){
-		String tmp = subject.getName() + "\n" + subject.getTeacher();
-		return tmp;
-	}
 
 }

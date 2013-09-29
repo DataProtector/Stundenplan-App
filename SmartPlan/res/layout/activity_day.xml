@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="1."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
          
           <TextView
@@ -34,6 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="2."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
           
            <TextView
@@ -41,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="3."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
            
             <TextView
@@ -48,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="4."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
             
              <TextView
@@ -55,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="5."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
              
               <TextView
@@ -62,6 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="6."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
               
                <TextView
@@ -69,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="7."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
                
                 <TextView
@@ -76,6 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="8."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
                 
                  <TextView
@@ -83,6 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="9."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
                  
                  <TextView
@@ -90,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="10."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
                  
                  <TextView
@@ -97,6 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="11."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
                  
                  <TextView
@@ -104,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="12."
+            android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge" />
                  
                  
@@ -181,40 +193,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView2b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView2c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView2d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView2e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -228,40 +245,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView3b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView3c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView3d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView3e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -275,40 +297,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView4b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView4c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView4d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView4e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -322,40 +349,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView5b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView5c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView5d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView5e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -369,40 +401,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView6b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView6c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView6d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView6e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -416,40 +453,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView7b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView7c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView7d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView7e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -463,40 +505,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView8b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView8c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView8d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView8e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -510,40 +557,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView9b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView9c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView9d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView9e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -557,40 +609,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView10b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView10c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView10d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView10e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -604,40 +661,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView11b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView11c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView11d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView11e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -651,40 +713,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView12b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView12c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView12d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView12e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
@@ -698,40 +765,45 @@
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView13b"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView13c"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView13d"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         <TextView
             android:id="@+id/textView13e"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:text=""
+            android:gravity="center"
             android:layout_gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
         
